@@ -1,0 +1,756 @@
+/* set the margin, padding and max width of the parent container */
+.home-container{
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+}
+/* set the margin and padding of predefined class row */
+.home-row{
+  margin: 0px;
+  padding: 0px;
+}
+/* columns with 3:5:4 width proportion  */
+.home-col3{
+  margin: 0px;
+  padding: 0px;
+}
+
+.home-col5{
+  margin: 0px;
+  padding: 0px;
+ 
+}
+.home-col4{
+  margin: 0px;
+  padding: 0px;
+  
+}
+/* media query for screen size of laptop and desktop */
+@media (min-width: 768px){
+
+/* column containing nav bar */
+  .home-col3{
+    margin: 0px;
+    padding: 0px;
+    /* fixed position to make the column stay in place */
+    position: fixed; 
+    height: 100%;
+    /* z-ndex 1 to stay in front */
+    z-index: 1;
+    border-right: 1px solid #e6ecf0;
+    /* for scrollbar */
+    overflow: auto;
+  }
+
+/* navigation bar */
+  .nav{
+    /* positioned relative to .col3 */
+    position: absolute;
+    width:65%;
+    right: 0;
+    /* table for the buttons be in list order */
+    display: table;
+    overflow:auto;
+  }
+/* properties of icons in navbar*/
+  .fa-fw{
+    position: relative;
+    font-size:25px;
+    padding-top:1px ;
+    border-radius: 50px;
+  }
+
+  .fa-home{
+    color: #1da1f2;
+  }
+
+  .fa-twitter{
+    margin-top: 4px;
+    color: #1da1f2;
+  }
+/* properties of twitter icon in navbar*/
+  .homebtn{
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: max-content;
+    padding-top: 1px;
+    padding-bottom: 37px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 100px;
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+    transition: 0.15s;
+  }
+/* font settings and other properties of the texts in navbar*/
+  .otherbtn {
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #1d2125;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-size: 17px;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    width: max-content;
+    padding-top: 8px;
+    padding-bottom: 37px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 100px;
+    margin-bottom: 3px;
+    transition: 0.15s;
+
+  }
+/* properties of twitter icon when in hover*/
+  .homebtn:hover{
+    background-color: #e8f5fe;
+    color: #1da1f2;
+    text-decoration: none;
+  }
+/* properties of other buttons when in hover*/
+  .otherbtn:hover{
+    background-color: #e8f5fe;
+    color: #1da1f2;
+    text-decoration: none;
+  }
+/* properties of tweet button in navbar */
+  .tweetbutn {
+    border-radius: 100px;
+    background-color: #1da1f2;
+    color: #FFFFFF;
+    text-align: center;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-size: 15px;
+    padding: 12px;
+    position: relative;
+    text-size-adjust: 100%;
+    overflow-wrap: break-word;
+    cursor: pointer;
+    margin-top: 0px;
+  }
+/* properties of tweet button when in hover*/
+  .tweetbutn:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+/* to hide some buttons that are not in the desktop version */
+  .hidden_l{
+    display: none;
+  }
+
+  /* properties of profile button in navbar*/
+  .profile{
+    border-radius: 100px;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #1d2125;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    display: table;
+    height: 30px;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 100px;
+    margin-bottom: 3px;
+    transition: 0.15s;
+    margin-top: 100px;
+    
+  }
+ /* properties of profile button when in hover*/
+  .profile:hover{
+    background-color: #e8f5fe;
+    text-decoration: none;
+    color:#1d2125;
+  }
+   /* properties of texts in the profile button */
+  .name{
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #1d2125;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-size: 14px;
+    display: table-cell;
+  }
+  .username{
+    color: gray;
+    font-weight: 300;
+    display: table-cell;
+    float: right;
+  }
+/* properties of the picture in the profile button */
+  .dp{
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+/* column containing tweet area and tweets */
+  .home-col5{
+    margin-left: 25%;
+    padding: 0px;
+    border-right: 1px solid #e6ecf0;
+  }
+/* tweet area */
+  .tweet_col-5{
+    margin-top: -20px;
+    border-bottom: 10px solid #e6ecf0; 
+  }
+/* home bar */
+  .top_portion{
+    position: -webkit-sticky;
+    position: sticky;  
+    top: 0; /* required */
+    background-color: #FFFFFF;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 800;
+    font-stretch: 50%;
+    font-size: 19px;
+    padding-top: 12px;
+    padding-left: 0px;
+    padding-right: 16px;
+    height: 55px;
+    border-bottom: .5px solid #e6ecf0;
+  }
+
+  .home_mid:hover{
+    text-decoration: none;
+  }
+  /*properties of icon in home bar */
+.fa-star{
+  padding: 5px;
+  border-radius: 700px;
+  float: right;
+}
+
+.fa-star:hover{
+  background-color: #e8f5fe;
+  color: #1da1f2;
+  text-decoration: none;
+}
+/* container of the tweet area */
+  .tweet_col-5under{
+    margin-top: 30px;
+    margin-left: 18px;
+    margin-right: 15px;
+  }
+/* properties of images in tweet area */
+  .dp{
+    padding-top: -30px;
+    max-width: 52px;
+    max-height: 52px;
+  }
+
+  #pic{
+    margin-top: 5px;
+    margin-bottom: -5px;
+    border: .5px solid #a7b1b9;
+    border-radius: 15px;
+  }
+
+  #tweetdp{
+    width: 49px
+  }
+/* properties of tweet box */
+  .tweetbox{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #1d2125;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    width: 470px;
+    overflow: auto;
+  }
+/* properties of tweet box */
+  .tweetboxbtn{
+    padding: 5px;
+  border-radius: 700px;
+    margin-left: 4px;
+  }
+  /* container of icons under tweet box*/
+  .tweetbtnrow{
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+
+  .tweetboxbtn:hover{
+    background-color: #e8f5fe;
+  color: #1da1f2;
+  text-decoration: none;
+  }
+  /* position of tweet button in tweet area */
+  a.tweetbtnbox{
+    margin-top: -9px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    height: 40px;
+    line-height: 31px;
+    
+  }
+/* tweet button properties */
+  .tweetbtnbox{
+    border-radius: 100px;
+    background-color: #1da1f2;
+    color: #FFFFFF;
+    text-align: center;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-stretch: 100%;
+    font-size: 15px;
+    
+    float: right;
+  }
+
+  .tweetbtnbox:hover{
+    color: white;
+    text-decoration: none;
+  }
+/* container of posted tweets  */
+  .center_portion{
+    max-height: 92%;
+    border-bottom: .5px solid #e6ecf0;
+  }
+
+/* container of a tweet  */
+  .tweet{
+    border-bottom: .5px solid #e6ecf0;
+    padding-top: 6px;
+    
+  }
+/* grid in tweet */
+  section{
+    display: grid;
+    /* gap between the dp and the content */
+    grid: auto/ 40px;
+    grid-gap: 0 2em;
+    padding-right: 17px;
+  }
+
+  section p {
+    /* which column to display the content */
+    grid-column: 2/ 3;
+    margin-bottom:5px ;
+  }
+
+  /* position of the dp */
+  .tweetdp_sec{
+    padding-left: 15px;
+    grid-column: 1/2;
+    align-self: start;
+  }
+
+  #tweetdp{
+    width: 49px
+  }
+
+  /* button properties */
+  .fa-chevron-down{
+    margin-top: -14px;
+    float: right;
+  }
+/* attached pic properties */
+  #pic{
+    margin-top: 5px;
+    margin-bottom: -5px;
+    border: .5px solid #a7b1b9;
+    border-radius: 15px;
+  }
+
+/* buttons properties */
+  .like{
+    display: flex;
+    padding-top: 10px;
+    padding-right: -50px;
+  }
+  .tweetbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: right;
+    flex-grow: 1;
+    font-size: 5px;
+    
+  }
+  /* text properties */
+  .name{
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 650;
+    font-stretch: 50%;
+    font-size: 17px;
+  }
+    /* column containing search bar and trends */
+  .home-col4{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    right: 0;
+    height: 100%;
+    border-right: 1px solid #e6ecf0;
+  }
+/* container of search bar and trends */
+  .rightarea{
+    position: absolute;
+    width:80%;
+    height: 100%;
+    margin-left: 45px;
+    margin-right: 45px;
+    display: table;
+    overflow:auto;
+    overflow-y: unset;
+    
+  }
+  /* search box properties */
+  .search-box {
+    padding-left: 2.375rem;
+    border-radius: 500px;
+    background-color: #e6ecf0;
+    border: none;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  
+  .fa-search{
+    position: absolute;
+    top: 21px;
+    left: 13px;
+  }
+  .search-box:focus{
+    background-color: white;
+    border: .5px solid #1da1f2;
+    box-shadow: none;
+    color: #1da1f2;
+  }
+
+  /* container of trends */
+  .trends{
+    border-radius: 15px;
+    background-color: #f5f8fa;
+    width: 100%;
+    margin-top: 15px;
+    height: 675px;
+  }
+
+  .phtrends{
+    border-bottom: .1px solid #e6ecf0;
+    text-align: center;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 1000;
+    font-stretch: 1000%;
+    font-size:19px;
+    height: 45px;
+    text-align: start;
+    padding-top: 9px;
+    padding-left: 16px;
+    margin-bottom: 0px;
+  }
+  .fa-cog{
+    color: #1da1f2;
+    float: right;
+    margin-top: -32px;
+    margin-right:15px ;
+  }
+/* position of the trending topics */
+  .trending{
+    margin-top: 0px;
+    height: 65px;
+    padding-top: 7px;
+    border-bottom: .1px solid #e6ecf0;
+  }
+  /* text properties */
+  .trend{
+    text-align: center;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #667887;
+    font-weight: 400;
+    font-stretch: 1000%;
+    font-size:13px;
+    
+    text-align: start;
+    padding-top: 0;
+    padding-left: 16px;
+  }
+  .show{
+    text-align: center;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #1da1f2;
+    font-weight: 400;
+    font-stretch: 1000%;
+    font-size:15px;
+    
+    text-align: start;
+    padding-top: 0;
+    padding-left: 16px;
+  }
+
+  .showmore{
+    margin-top: 0px;
+    height: 65px;
+    padding-top: 7px;
+  }
+  .topic{
+    color: #000000;
+    font-weight: 700;
+    font-stretch: 1000%;
+    font-size:15px;
+    padding-left: 16px;
+  }
+
+ /* container of who to follow box */
+  .whotofollow{
+    border-radius: 15px;
+    background-color: #f5f8fa;
+    width: 100%;
+    margin-top: 15px;
+    height: 300px;
+    
+  }
+/* text properties  */
+  .follow{
+    text-align: left;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #000000;
+    font-weight: 400;
+    font-stretch: 1000%;
+    font-size:13px;
+    border-bottom: .1px solid #e6ecf0;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+  }
+  
+  .followname{
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #000000;
+    font-weight: 700;
+    font-stretch: 1000%;
+    font-size:15px;
+    width: auto;
+    margin-top: 2px;
+    
+    position: absolute;
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .followname2{
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #667887;
+    font-weight: 400;
+    font-stretch: 1000%;
+    font-size:15px;
+    width: auto;
+    padding-left: 10px;
+    position: absolute;
+    display: inline-block;
+    padding-top: 21px;
+  }
+/* follow button properties */
+  .followbut{
+    border-radius: 100px;
+    background-color: #f5f8fa;
+    border: .5px solid #1da1f2;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: #1da1f2;
+    font-weight: 700;
+    font-stretch: 1000%;
+    font-size:15px;
+    text-align: center;
+   line-height: 26px;
+    position: absolute;
+    margin-top: 6px;
+    right: 15px;
+    width: 80px;
+    height: 30px;
+
+  }
+}
+
+/* media query for screen size of mobile phones */
+@media (min-width: 375px) and (max-width: 767px){
+
+  .home-col3 {
+    height: 8%;
+  } 
+
+  .nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    
+  }
+
+  
+  .fa-fw{
+    position: relative;
+    font-size:25px;
+    padding-top:1px ;
+    border-radius: 50px;
+    color: #a7b1b9;
+  }
+  .fa-fw:hover{
+    border-radius: 50px;
+    box-shadow: 0 0 0 6px #e8f5fe;
+    background-color: #e8f5fe;
+    height: 30px;
+    width: 30px;
+    transition: 0.1s;
+    color: #1da1f2;
+    text-decoration: none;
+  }
+
+  a:visited{
+    text-decoration: none;
+    color: #e8f5fe;
+  }
+
+  .otherbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    font-size: 0px;
+    
+  }
+  .hidden{
+    margin-left: 0;
+    display: none;
+  }
+
+  .home-col5{
+    height: 92%;
+    
+    
+  }
+
+  .top_portion{
+    position: -webkit-sticky;
+    position: sticky;  
+    top: 0; /* required */
+    background-color: #FFFFFF;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 800;
+    font-stretch: 50%;
+    font-size: 19px;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 55px;
+    border-bottom: .5px solid #e6ecf0;
+  }
+  .homeboxbtn{
+    float:right;
+  }
+
+  .dp{
+    padding-top: -30px;
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .center_portion{
+    max-height: 92%;
+    border-bottom: .5px solid #e6ecf0;
+    overflow: scroll;
+  }
+
+  .tweet{
+   
+    border-bottom: .5px solid #e6ecf0;
+    padding-top: 6px;
+    
+  }
+
+  section{
+    display: grid;
+    grid: auto/ 40px;
+    grid-gap: 0 2em;
+    padding-right: 17px;
+    
+  }
+
+  section p {
+    grid-column: 2 / 3;
+    margin-bottom:5px ;
+  }
+
+  .tweetdp_sec{
+    padding-left: 15px;
+    grid-column: 1/2;
+    align-self: start;
+  }
+  .fa-chevron-down{
+    padding-top: 8px;
+    padding-right: 5px;
+    float: right;
+  }
+
+  #pic{
+    margin-top: 5px;
+    margin-bottom: -5px;
+    border: .5px solid #a7b1b9;
+    border-radius: 15px;
+  }
+
+  #tweetdp{
+    width: 49px
+  }
+  .like{
+    width: 100%;
+    height: 2%; 
+    display: flex;
+    padding-top: 10px;
+  }
+  .tweetbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: right;
+    flex-grow: 1;
+    font-size: 5px;
+    
+  }
+
+
+  
+  .name{
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 650;
+    font-stretch: 50%;
+    font-size: 17px;
+  }
+
+  .write{
+    position: fixed;
+    width:60px;
+    height:60px;
+    bottom:10%;
+    right: 5%;
+    float: inline-end;
+    
+    background-color: #1da1f2;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    
+  }
+  
+  .new-tweet{
+    font-size: 25px;
+    margin-right: 2spx;
+    margin-top:19px;
+  }
+  
+  
+}
